@@ -1,24 +1,24 @@
 #include "monty.h"
 #include <stdlib.h>
 #include <stdio.h>
-
+/**
+*push - this function pushes to the stack
+*@stack: this is a pointer to the address of the stack
+*@value: this is the integer value for the node of the stack
+*/
 void push(stack_t **stack, int value)
 {
-		stack_t *new_node = malloc(sizeof(stack_t));
+stack_t *new_node = malloc(sizeof(stack_t));
 
-		if (new_node == NULL) {
-				fprintf(stderr, "Error: Memory allocation failed\n");
-				exit(EXIT_FAILURE);
-		}
-
-		new_node->n = value;
-		new_node->prev = NULL;
-		new_node->next = *stack;
-
-		if (*stack != NULL) {
-				(*stack)->prev = new_node;
-		}
-
-		*stack = new_node;
-
+if (new_node == NULL)
+{
+fprintf(stderr, "Error: Memory allocation failed\n");
+exit(EXIT_FAILURE);
+}
+new_node->n = value;
+new_node->prev = NULL;
+new_node->next = *stack;
+if (*stack != NULL)
+(*stack)->prev = new_node;
+*stack = new_node;
 }
