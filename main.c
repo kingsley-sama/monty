@@ -33,15 +33,19 @@ if (strcmp(opcode, "push") == 0)
 {
 if (fscanf(file, "%d", &value) != 1)
 {
+if (opcode[0] == '#')
+{
+while (fgetc(file) != '\n' && !feof(file))
+;
+continue;
+}
 fprintf(stderr, "Error: usage: push integer\n");
 exit(EXIT_FAILURE);
 }
 push(&stack, value);
 }
 else if (strcmp(opcode, "pall") == 0)
-{
-pall(&stack, 0);
-}
+{						pall(&stack, 0);		}
 }
 fclose(file);
 return (0);
