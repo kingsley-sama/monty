@@ -2,16 +2,16 @@
 #include <stdio.h>
 
 /**
-* div_op - Divides the second top element of the stack by the top element
+* div_op - Divides the second top
 * @stack: Pointer to the address of the stack
-* @line_number: Line number in the Monty bytecode file
+* @line_number: Line number in the
 *
 * Description:
-* This function divides the second top element of the stack by the top element.
-* If the stack contains less than two elements, it prints an error message to stderr
-* and exits with EXIT_FAILURE. The result is stored in the second top element of the stack,
+* This function divides the second
+* If the stack contains less than
+* and exits with EXIT_FAILURE. The
 * and the top element is removed.
-* If the top element of the stack is 0, it prints an error message to stderr
+* If the top element of the stack
 * and exits with EXIT_FAILURE.
 */
 void div_op(stack_t **stack, unsigned int line_number)

@@ -1,10 +1,4 @@
-
 #include "monty.h"
-#include <stddef.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-
 /**
  * main - Entry point for the Monty interpreter
  * @argc: Number of command-line arguments
@@ -31,14 +25,11 @@ int main(int argc, char *argv[])
 				perror("Error opening file");
 				exit(EXIT_FAILURE);
 		}
-		while (fscanf(file, "%s", opcode) != EOF)
+		while (fscanf(file, "%9s", opcode) != EOF)
 		{
 				len = strlen(opcode);
 				if (len > 0 && opcode[len - 1] == '$')
-				{
 						opcode[len - 1] = '\0';
-				}
-
 				if (strcmp(opcode, "push") == 0)
 				{
 						if (fscanf(file, "%d", &value) != 1)
@@ -47,21 +38,25 @@ int main(int argc, char *argv[])
 								{
 										while (fgetc(file) != '\n' && !feof(file))
 												;
-										continue;
 								}
 								fprintf(stderr, "Error: usage: push integer\n");
 								exit(EXIT_FAILURE);
 						}
 						push(&stack, value);
-				} else if (strcmp(opcode, "pall") == 0) {
+				}
+				else if (strcmp(opcode, "pall") == 0)
+				{
 						pall(&stack, 0);
 				}
-				else if (strcmp(opcode, "pall") != 0 && strcmp(opcode, "push") != 0&& strlen(opcode) != 0)
+				else if (strcmp(opcode, "pall") != 0 && strcmp(opcode, "push")
+						 != 0 && strlen(opcode) != 0)
 				{
 						execute_instruction(opcode, value, &stack, line_number);
-			  	}
-				line_number ++;
+				}
+				line_number++;
 		}
 		fclose(file);
+		while (stack != NULL)
+				pop(&stack, 0);
 		return (EXIT_SUCCESS);
 }

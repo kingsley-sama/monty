@@ -2,18 +2,18 @@
 #include <stdio.h>
 
 /**
-* mod - Computes the rest of the division of the second top element
+* mod - Computes the rest of the division
 *       of the stack by the top element
-* @stack: Pointer to the address of the stack
-* @line_number: Line number in the Monty bytecode file
+* @stack: Pointer to the address of the
+* @line_number: Line number in the Monty
 *
 * Description:
-* This function computes the rest of the division of the second top element
+* This function computes the rest of
 * of the stack by the top element.
-* If the stack contains less than two elements, it prints an error message to stderr
-* and exits with EXIT_FAILURE. The result is stored in the second top element of the stack,
+* If the stack contains less than two
+* and exits with EXIT_FAILURE. The re
 * and the top element is removed.
-* If the top element of the stack is 0, it prints an error message to stderr
+* If the top element of the stack is 0,
 * and exits with EXIT_FAILURE.
 */
 void mod(stack_t **stack, unsigned int line_number)
