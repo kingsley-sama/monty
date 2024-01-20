@@ -7,15 +7,11 @@
 * @line_number: Line number in the Monty bytecode file
 *
 * Description:
-* This function prints the char at the top of the stack,
-* followed by a new line.
-* The integer stored at the top of the stack is treated as the
-* ASCII value of the character to be printed.
-* If the value is not in the ASCII table (man ascii), it prints
-* an error message to stderr
+* This function prints the char at the top of the stack, followed by a new line.
+* The integer stored at the top of the stack is treated as the ASCII value of the character to be printed.
+* If the value is not in the ASCII table (man ascii), it prints an error message to stderr
 * and exits with EXIT_FAILURE.
-* If the stack is empty, it prints an error message to stderr
-* and exits with EXIT_FAILURE.
+* If the stack is empty, it prints an error message to stderr and exits with EXIT_FAILURE.
 */
 void pchar(stack_t **stack, unsigned int line_number)
 {
