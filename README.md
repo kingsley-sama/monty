@@ -7,3 +7,4 @@
  * 3. swap.c: This implements swap opcode
  * 4. add.c: This implements add opcode
  * 5. nop.c: This implements the nop opcode
+ * 6. sub.c: This implements sub opcode
