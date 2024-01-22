@@ -5,3 +5,4 @@
  * 1. pint.c: This implements pint opcode
  * 2. pop.c: This implements pop opcode
  * 3. swap.c: This implements swap opcode
+ * 4. add.c: This implements add opcode
