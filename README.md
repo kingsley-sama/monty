@@ -13,3 +13,4 @@
  * 9. mod.c: This implements mod opcode
  * 10. comments: This handles comment
  * 11. pchar.c: This implements pchar opcode
+ * 12. pstr.c: This implements pstr opcode
