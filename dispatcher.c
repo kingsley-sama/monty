@@ -7,7 +7,8 @@
  * @stack: Pointer to the stack
  * @line_number: Line number in the Monty file
  */
-void execute_instruction(char *opcode, int value, stack_t **stack, unsigned int line_number)
+void execute_instruction(char *opcode, int value, stack_t **stack,
+unsigned int line_number)
 {
 		instruction_t instructions[] = {
 				{"pall", pall},
