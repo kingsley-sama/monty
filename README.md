@@ -10,3 +10,4 @@
  * 6. sub.c: This implements sub opcode
  * 7. div.c: This implements div opcode
  * 8. mul.c : This implements mul opcode
+ * 9. mod.c: This implements mod opcode
