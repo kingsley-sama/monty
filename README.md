@@ -9,3 +9,4 @@
  * 5. nop.c: This implements the nop opcode
  * 6. sub.c: This implements sub opcode
  * 7. div.c: This implements div opcode
+ * 8. mul.c : This implements mul opcode
