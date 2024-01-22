@@ -11,3 +11,5 @@
  * 7. div.c: This implements div opcode
  * 8. mul.c : This implements mul opcode
  * 9. mod.c: This implements mod opcode
+ * 10. comments: This handles comment
+ * 11. pchar.c: This implements pchar opcode
